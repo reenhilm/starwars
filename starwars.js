@@ -16,9 +16,13 @@ function getApi() {
             output.innerHTML += `found ${data.result.length} characters matching searchcriteria: ${charName}\r\n`
             for(let i=0;i<data.result.length;i++)
             {
-                output.innerHTML += `Character result #${i}\r\n`;
-                output.innerHTML += `${data.result[i].properties.name}, ${data.result[i].description}\r\n`
-                output.innerHTML += `properties: ${JSON.stringify(data.result[i].properties, null, 2)}\r\n`
+                output.innerHTML += `  Character result #${i}\r\n`;
+                output.innerHTML += `      ${data.result[i].properties.name}, ${data.result[i].description}\r\n`
+                output.innerHTML += `      Height: ${data.result[i].properties.height}\r\n`
+                output.innerHTML += `      Mass: ${data.result[i].properties.mass}\r\n`
+                output.innerHTML += `      Gender: ${data.result[i].properties.gender}\r\n`
+                output.innerHTML += `      Hair color: ${data.result[i].properties.hair_color}\r\n`
+                /* output.innerHTML += `properties: ${JSON.stringify(data.result[i].properties, null, 2)}\r\n` */
             }
         }
         else
